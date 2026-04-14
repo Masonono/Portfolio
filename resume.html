@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+  resume.html - Resume Page
+  Structure: Navigation → Header → Resume Image (click to download PDF)
+-->
+<html lang="en">
+<head>
+  <!-- ===== METADATA ===== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume - Mason Bergen</title>
+  <!-- ===== STYLES ===== -->
+  <style>
+    /* Font imports */
+    @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+    /* Global resets */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Forum", serif;
+      background: linear-gradient(180deg, #000, #222);
+      color: #fff;
+    }
+    /* ===== NAVIGATION STYLES ===== */
+    nav {
+      background-color: rgb(0, 0, 0);
+      font-family: "Forum", serif;
+      padding: 0.5rem 0;
+    }
+    ul {
+      text-align: left;
+      padding: 0.25rem 0 0.25rem 100px;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      width: clamp(100px, 15vw, 200px);
+      line-height: 1.4;
+      font-family: "Forum", serif;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      display: block;
+    }
+    /* ===== CONTENT STYLES ===== */
+    .wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0rem auto;
+      padding: 0rem;
+      box-sizing: border-box;
+    }
+    p {
+      font-size: clamp(0.95rem, 2.6vw, 1.1rem);
+      margin: 0.75rem 0;
+    }
+    /* ===== RESUME IMAGE STYLES ===== */
+    .resume-link {
+      display: block;
+      cursor: pointer;
+    }
+    .resume-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .download-hint {
+      text-align: center;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    /* ===== RESPONSIVE STYLES ===== */
+    @media (max-width: 800px) {
+      .wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+    }
+    @media (min-aspect-ratio: 4/3) {
+      .wrap {
+        margin: 0rem auto;
+        max-width: 100%;
+        padding: 0rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav>
+    <ul>
+      <li> <a href="index.html">Home</a> </li>
+      <li> <a href="resume.html">Resume</a> </li>
+      <li> <a href="contact.html">Contact</a> </li>
+    </ul>
+  </nav>
+  <!-- ===== RESUME IMAGE (click to download PDF) ===== -->
+  <div class="wrap">
+    <a class="resume-link" href="images/Mason Bergens Resume.pdf" download="Mason_Bergens_Resume.pdf">
+      <img src="images/Mason Bergens Resume.jpeg" alt="a series of triangular meshes set in a sand dune">
+    </a>
+    <p class="download-hint">Click to download PDF</p>
+  </div>
+</body>
+</html>
